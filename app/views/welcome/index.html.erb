@@ -1,3 +1,7 @@
 <div class="alert alert-primary" role="alert">
-  Welcome!
+  <h1>Welcome! <%= Settings.service.name %></h1>
+  <ul>
+    <li><%= ENV['HOGE'] %></li>
+    <li><%= Settings.service.test_text %></li>
+  </ul>
 </div>

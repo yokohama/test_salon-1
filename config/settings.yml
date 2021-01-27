@@ -1,0 +1,3 @@
+service:
+  name: 'Test Salon 1'
+  test_text: <%= ENV['MOGE'] %>
