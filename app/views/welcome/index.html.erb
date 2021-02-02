@@ -3,5 +3,11 @@
   <ul>
     <li><%= ENV['HOGE'] %></li>
     <li><%= Settings.service.test_text %></li>
+
+    <li><%= link_to "スタッフログイン", new_staff_session_path %></li>
+    <li><%= link_to "ログアウト", destroy_staff_session_path, method: :delete %></li>
+    <li><%= link_to "メンバーログイン", new_member_session_path %></li>
+    <li><%= link_to "ログアウト", destroy_member_session_path, method: :delete %></li>
   </ul>
 </div>
+
