@@ -1,4 +1,11 @@
 # README
+test
+
+## なにをつくるのか？
+簡単なECショップ（決済機能なし）を作ります。
+アクターは、運営スタッフと利用者（会員）を想定します。
+
+https://lucid.app/lucidchart/invitations/accept/915ec90a-6220-4080-a7e6-3ee6eb0b1dea
 
 ## How to start
 
