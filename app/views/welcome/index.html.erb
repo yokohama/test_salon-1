@@ -1,6 +1,13 @@
 <div class="alert alert-primary" role="alert">
   <h1>Welcome! <%= Settings.service.name %></h1>
   <ul>
+    <% if staff_signed_in? %>
+      <li class="text-success">ログイン中(staff)<%= current_staff.email %></li>
+    <% elsif member_signed_in? %>
+      <li class="text-success">ログイン中(member)<%= current_member.email %></li>
+    <% else %>
+      <li class="text-success">Not_login</li>
+    <% end %>
     <li><%= ENV['HOGE'] %></li>
     <li><%= Settings.service.test_text %></li>
     <li><%= link_to "スタッフログイン", new_staff_session_path %></li>
