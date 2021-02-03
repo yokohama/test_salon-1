@@ -1,6 +1,5 @@
 module Staffs
-  class DashboardsController < ApplicationController
-    before_action :login_check
+  class DashboardsController < StaffsController
     def show
     end
   end
