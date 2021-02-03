@@ -7,5 +7,10 @@ Rails.application.routes.draw do
   namespace :staffs do
     resource :dashboards, only: [:show]
   end
+
+  namespace :members do
+    resource :dashboards, only: [:show]
+  end
+  
 end
 
