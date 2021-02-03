@@ -1,6 +1,7 @@
 module Staffs
   class StaffsController < ApplicationController
     before_action :login_check
+    layout "staffs"
     
     private
   
