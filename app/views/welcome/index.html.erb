@@ -2,9 +2,11 @@
   <% if current_staff.nil? %>
     <%= link_to "スタッフログイン", new_staff_session_path %>
   <% end %>
+
   <% if current_member.nil? %>
     <%= link_to "メンバーログイン", new_member_session_path %>
   <% end %>
+  
   <h1>Welcome! <%= Settings.service.name %></h1>
   <ul>
     <li><%= ENV['HOGE'] %></li>
