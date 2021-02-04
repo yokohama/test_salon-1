@@ -1,6 +1,11 @@
 module Members
   class MembersController < ApplicationController
     before_action :login_check
+    layout "members"
+
+    def index
+      @members = Member.all
+    end
 
     private
 
