@@ -13,10 +13,10 @@
     <div class="container">
       <br />
 
-
-<%# エラーメッセージ %>
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p><br>
+      <%= render partial: "/shared/notice" %>
+      <% if current_member %>
+      <%= link_to 'ログアウト', destroy_member_session_path, method: :delete %>
+      <% end %>
       <p>メンバー</p>
       <%= yield %>
     </div>

@@ -14,9 +14,7 @@
       <br />
 
 
-<%# エラーメッセージ %>
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p><br>
+      <%= render partial: "/shared/notice" %>
       <% if current_staff %>
       <%= link_to 'ログアウト', destroy_staff_session_path, method: :delete %>
       <% end %>

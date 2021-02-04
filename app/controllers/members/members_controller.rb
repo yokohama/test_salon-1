@@ -3,10 +3,6 @@ module Members
     before_action :login_check
     layout "members"
 
-    def index
-      @members = Member.all
-    end
-
     private
 
     def login_check

@@ -18,7 +18,6 @@ Rails.application.routes.draw do
   
   namespace :members do
     resource :dashboards, only: [:show]
-    resources :members, only: [:index]
   end
   
 end
