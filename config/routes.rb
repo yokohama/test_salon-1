@@ -3,11 +3,11 @@ Rails.application.routes.draw do
     sessions: 'members/sessions',
     passwords: 'members/passwords',
     registrations: 'members/registrations'
-    }
+  }
   devise_for :staffs, controllers: {
     sessions: 'staffs/sessions',
     passwords: 'staffs/passwords'
-    }
+  }
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root to: 'welcome#index'
   
