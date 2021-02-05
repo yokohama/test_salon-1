@@ -12,11 +12,8 @@
   <body  class="bg-light" >
     <div class="container">
       <br />
-
-
-<%# エラーメッセージ %>
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p><br>
+      
+      <%= render partial: "/shared/notice" %>
       <%= yield %>
     </div>
 
