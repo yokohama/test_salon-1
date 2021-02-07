@@ -1,1 +1,3 @@
-test
+<% @categoris.each do |category| %>
+<%= link_to "#{category.name}", staffs_category_path(:id) %><%= link_to "削除", staffs_category_path, method: :delete %>
+<% end %>
