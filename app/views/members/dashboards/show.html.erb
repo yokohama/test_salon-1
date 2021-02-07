@@ -1,1 +1,7 @@
 members/dashboards/show
+<h1><%= @member = current_member.nickname %></h1>
+<%= @member = current_member.email %><br>
+でログイン
+<h2>
+<%= link_to 'プロフィール編集', edit_members_profiles_path %>
+</h2>
