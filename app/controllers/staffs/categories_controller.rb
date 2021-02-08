@@ -38,7 +38,7 @@ module Staffs
     def destroy
       @category = Category.find(params[:id])
       @category.destroy
-      redirect_to :index
+      redirect_to staffs_categories_path
     end
 
     private
