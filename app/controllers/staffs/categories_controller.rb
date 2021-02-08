@@ -27,9 +27,9 @@ module Staffs
     end
 
     def update
-      @category = Category.find
+      @category = Category.find(params[:id])
       if @category.update(category_params)
-        redirect_to :show
+        redirect_to staffs_category_path
       else
         render :edit
       end
