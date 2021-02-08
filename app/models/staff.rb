@@ -3,4 +3,7 @@ class Staff < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable, :registerable and :omniauthable
   devise :database_authenticatable, 
          :recoverable, :rememberable, :validatable
+
+  # Categoryのバリデーション
+  validates :name, presence: true 
 end

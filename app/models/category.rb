@@ -1,3 +1,3 @@
-class Category < ApplicationRecord
-  validates :name, presence: true
+class Category < Staff
+  # Staffの継承
 end
