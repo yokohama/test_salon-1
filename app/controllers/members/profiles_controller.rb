@@ -1,18 +1,15 @@
 module Members
   class ProfilesController < MembersController
    
+    def show
+    end
+    
     def edit
-      @member = current_member
     end
 
-    def show
-      @member = current_member
-    end
 
     def update
-      @member.update(member_params)
-      if @member.valid?
-        @member.save
+      if current_member.update(member_params)
         redirect_to members_profiles_path, notice: '編集しました'
       else
         render :edit
@@ -21,9 +18,7 @@ module Members
 
     private
     def member_params
-      params.require(:member).permit(:nickname, :email)
+      params.require(:member).permit(:nickname)
     end
   end
 end
-
-

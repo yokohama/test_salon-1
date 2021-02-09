@@ -3,5 +3,5 @@ members/dashboards/show
 <%= @member = current_member.email %><br>
 でログイン
 <h2>
-<%= link_to 'プロフィール編集', edit_members_profiles_path %>
+<%= link_to 'プロフィール編集', edit_members_profiles_path, method: :get %>
 </h2>
