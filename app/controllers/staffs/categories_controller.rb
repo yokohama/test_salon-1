@@ -1,6 +1,6 @@
 module Staffs
   class CategoriesController < StaffsController
-    # index, show, new, create, edit, update, destroy
+
     def index
       @categories = Category.all
     end
