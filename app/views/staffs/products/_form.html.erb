@@ -2,8 +2,9 @@
   <p><%= f.text_field :name, placeholder: "name" %></p>
   <p><%= f.text_field :price, placeholder: "金額" %></p>
   <p><%= f.text_area :description, placeholder: "説明", rows: "3" %></p>
-  <div>
-    カテゴリー
+
+  <p>カテゴリー</p>
+  <div class="overflow-auto border-top border-bottom" style="width:160px; height:100px; padding: 5px; margin: 10px;">
     <% @categories.each do |category| %>
       <div>
         <%= f.radio_button :category_id, category.id %>
