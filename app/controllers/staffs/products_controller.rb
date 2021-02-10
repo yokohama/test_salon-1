@@ -20,11 +20,6 @@ module Staffs
 
     def edit
       @product = Product.find(params[:id])
-      if @product.save
-        redirect_to staffs_products_path
-      else
-        render :new
-      end
     end
 
     def update
