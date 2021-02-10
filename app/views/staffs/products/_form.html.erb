@@ -2,8 +2,16 @@
   <p><%= f.text_field :name, placeholder: "name" %></p>
   <p><%= f.text_field :price, placeholder: "金額" %></p>
   <p><%= f.text_area :description, placeholder: "説明", rows: "3" %></p>
-  <p><%= f.text_field :category_id, placeholder: "カテゴリー" %></p>
+  <div>
+    カテゴリー
+    <% @categories.each do |category| %>
+      <div>
+        <%= f.radio_button :category_id, category.id %>
+        <%= f.label :category_id, "#{category.name}" %>
+      </div>
+    <% end %>
+  </div>
   <p><%= f.submit "SEND" %></p>
 <% end %>
 
-<%# params.require(:product).premit(:name, :price, :description, :category_id) %>
+

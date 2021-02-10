@@ -7,9 +7,11 @@ module Staffs
 
     def new
       @product = Product.new
+      @categories = Category.all
     end
 
     def create
+      @categories = Category.all
       @product = Product.new(product_params)
       if @product.save
         redirect_to staffs_products_path
@@ -20,9 +22,11 @@ module Staffs
 
     def edit
       @product = Product.find(params[:id])
+      @categories = Category.all
     end
 
     def update
+      @categories = Category.all
       @product = Product.find(params[:id])
       if @product.update(product_params)
         redirect_to staffs_product_path
@@ -44,7 +48,7 @@ module Staffs
     private
 
     def product_params
-      params.require(:product).premit(:name, :price, :description, :category_id)
+      params.require(:product).permit(:name, :price, :description, :category_id)#.merge(category_id: params[:category_id])
     end
   end
 end 
