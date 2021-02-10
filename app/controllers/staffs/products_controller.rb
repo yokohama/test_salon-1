@@ -48,7 +48,7 @@ module Staffs
     private
 
     def product_params
-      params.require(:product).permit(:name, :price, :description, :category_id)#.merge(category_id: params[:category_id])
+      params.require(:product).permit(:name, :price, :description, :category_id)
     end
   end
 end 
