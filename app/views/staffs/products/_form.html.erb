@@ -2,16 +2,7 @@
   <p><%= f.text_field :name, placeholder: "name" %></p>
   <p><%= f.text_field :price, placeholder: "金額" %></p>
   <p><%= f.text_area :description, placeholder: "説明", rows: "3" %></p>
-
-  <p>カテゴリー</p>
-  <div class="overflow-auto border-top border-bottom" style="width:160px; height:100px; padding: 5px; margin: 10px;">
-    <% @categories.each do |category| %>
-      <div>
-        <%= f.radio_button :category_id, category.id %>
-        <%= f.label :category_id, "#{category.name}" %>
-      </div>
-    <% end %>
-  </div>
+  <p><%= f.select :category_id, @categories.map{ |category| [category.name, category.id] }, prompt: "カテゴリー" %></p>
   <p><%= f.submit "SEND" %></p>
 <% end %>
 
