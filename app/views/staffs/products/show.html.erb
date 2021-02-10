@@ -8,5 +8,8 @@
 <br>
 <%= link_to "商品編集", edit_staffs_product_path %>
 <br>
+<%= link_to "商品削除", staffs_product_path(@product.id), method: :delete %>
+<br>
+<br>
 
 <%= link_to "商品一覧に戻る", staffs_products_path %>
