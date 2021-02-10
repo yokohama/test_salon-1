@@ -1,3 +1,5 @@
 <% @products.each do |product| %>
+  <%= link_to "商品作成", new_staffs_product_path %>
+  <br>
   <%= link_to "商品名:#{product.name}", staffs_product_path(product.id) %>/<%= link_to "カテゴリー:#{product.category.name}", staffs_category_path(product.category_id) %>
 <% end %>

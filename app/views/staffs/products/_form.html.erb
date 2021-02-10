@@ -1,0 +1,9 @@
+<%= form_with model: [:staffs, @product], local: true do |f| %>
+  <p><%= f.text_field :name, placeholder: "name" %></p>
+  <p><%= f.text_field :price, placeholder: "金額" %></p>
+  <p><%= f.text_area :description, placeholder: "説明", rows: "3" %></p>
+  <p><%= f.text_field :category_id, placeholder: "カテゴリー" %></p>
+  <p><%= f.submit "SEND" %></p>
+<% end %>
+
+<%# params.require(:product).premit(:name, :price, :description, :category_id) %>
