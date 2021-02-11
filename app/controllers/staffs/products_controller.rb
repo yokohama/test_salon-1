@@ -1,5 +1,7 @@
 module Staffs
   class ProductsController < StaffsController
+    before_action :product_find, only: [:edit, :update, :show, :destroy]
+    before_action :products_all, only: [:new, :create, :edit, :update]
     
     def index
       @products = Product.includes(:category)
@@ -7,11 +9,9 @@ module Staffs
 
     def new
       @product = Product.new
-      @categories = Category.all
     end
 
     def create
-      @categories = Category.all
       @product = Product.new(product_params)
       if @product.save
         redirect_to staffs_products_path
@@ -21,13 +21,10 @@ module Staffs
     end
 
     def edit
-      @product = Product.find(params[:id])
-      @categories = Category.all
+
     end
 
     def update
-      @categories = Category.all
-      @product = Product.find(params[:id])
       if @product.update(product_params)
         redirect_to staffs_product_path
       else
@@ -36,11 +33,9 @@ module Staffs
     end
 
     def show
-      @product = Product.find(params[:id])
     end
 
     def destroy
-      @product = Product.find(params[:id])
       @product.destroy
       redirect_to staffs_products_path
     end
@@ -49,6 +44,14 @@ module Staffs
 
     def product_params
       params.require(:product).permit(:name, :price, :description, :category_id)
+    end
+
+    def product_find
+      @product = Product.find(params[:id])
+    end
+
+    def products_all
+      @categories = Category.all
     end
   end
 end 
