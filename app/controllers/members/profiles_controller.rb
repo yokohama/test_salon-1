@@ -1,6 +1,7 @@
 module Members
   class ProfilesController < MembersController
    
+
     def show
     end
     
@@ -22,3 +23,4 @@ module Members
     end
   end
 end
+
