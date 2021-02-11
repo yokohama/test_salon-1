@@ -1,12 +1,12 @@
 module Staffs
   class CategoriesController < StaffsController
+    before_action :category_find, only: [:show, :edit, :update, :destroy]
 
     def index
       @categories = Category.all
     end
 
     def show
-      @category = Category.find(params[:id])
     end
 
     def new
@@ -23,11 +23,9 @@ module Staffs
     end
 
     def edit
-      @category = Category.find(params[:id])
     end
 
     def update
-      @category = Category.find(params[:id])
       if @category.update(category_params)
         redirect_to staffs_category_path
       else
@@ -36,7 +34,6 @@ module Staffs
     end
 
     def destroy
-      @category = Category.find(params[:id])
       @category.destroy
       redirect_to staffs_categories_path
     end
@@ -47,6 +44,9 @@ module Staffs
       params.require(:category).permit(:name)
     end
 
+    def category_find
+      @category = Category.find(params[:id])
+    end
   end
 end
 

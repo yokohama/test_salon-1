@@ -1,0 +1,9 @@
+<%= form_with model: [:staffs, @product], local: true do |f| %>
+  <p><%= f.text_field :name, placeholder: "name" %></p>
+  <p><%= f.text_field :price, placeholder: "金額" %></p>
+  <p><%= f.text_area :description, placeholder: "説明", rows: "3" %></p>
+  <p><%= f.select :category_id, @categories.map{ |category| [category.name, category.id] }, prompt: "カテゴリー" %></p>
+  <p><%= f.submit "SEND" %></p>
+<% end %>
+
+
