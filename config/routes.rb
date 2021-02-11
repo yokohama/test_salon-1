@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   namespace :staffs do
     resource :dashboards, only: [:show]
     resources :members, only: [:index]
+    resources :categories
+    resources :products
   end
   
   namespace :members do

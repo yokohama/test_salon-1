@@ -1,0 +1,11 @@
+<%= link_to "#{@category.name}:編集", edit_staffs_category_path %>
+<br>
+<br>
+
+<% @category.products.each do |product| %>
+  <%= link_to "商品名:#{product.name}", staffs_product_path(product.id) %>
+  <br>
+<% end %>
+<br>
+
+<%= link_to "遷移先:staffs/categories#index", staffs_categories_path %>
