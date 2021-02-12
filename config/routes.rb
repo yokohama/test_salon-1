@@ -21,8 +21,7 @@ Rails.application.routes.draw do
   namespace :members do
     resource :dashboards, only: [:show]
     resource :profiles, only: [:show, :edit, :update]
-    resources :products, only: [:index]
-  
+    resources :products, only: [:index, :show]
   end
 
 end
