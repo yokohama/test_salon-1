@@ -1,16 +1,7 @@
 <% @products.each do |product| %>
-  <%= link_to product.name, members_product_path(product.id) %>
-<% end %>
-
-<br>
-<br>
-<br>
-
-<p>カテゴリー一覧</p>
-<% @categorys.each do |category| %>
-  <%= category.name %>/
-    <% category.products.each do |category_product| %>
-      <%= link_to category_product.name, members_product_path(category_product.id) %>
-    <% end %>
+  <%= link_to "商品名:#{product.name}", members_product_path(product.id) %>
+  <br>
+  <%= "カテゴリー:#{product.category.name}" %>
+  <br>
   <br>
 <% end %>
