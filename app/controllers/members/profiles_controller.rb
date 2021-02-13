@@ -2,7 +2,7 @@ module Members
   class ProfilesController < MembersController
    
     def show
-      @member = Member.find(current_member.id)
+
     end
     
     def edit
