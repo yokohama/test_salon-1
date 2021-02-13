@@ -1,13 +1,12 @@
 module Members
   class ProfilesController < MembersController
    
-
     def show
+
     end
     
     def edit
     end
-
 
     def update
       if current_member.update(member_params)
