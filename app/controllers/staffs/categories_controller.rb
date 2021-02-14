@@ -18,6 +18,7 @@ module Staffs
       if @category.save
         redirect_to staffs_categories_path, notice: t('.success')
       else
+        japan_error_message
         render :new
       end
     end
@@ -29,6 +30,7 @@ module Staffs
       if @category.update(category_params)
         redirect_to staffs_category_path, notice: t('.success')
       else
+        japan_error_message
         render :edit
       end
     end
