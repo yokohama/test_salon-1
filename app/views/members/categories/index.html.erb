@@ -1,0 +1,5 @@
+<% @categories.each do |category| %>
+  <%= link_to "カテゴリー:#{category.name}", members_category_path(category.id) %>
+  <br>
+  <br>
+<% end %>
