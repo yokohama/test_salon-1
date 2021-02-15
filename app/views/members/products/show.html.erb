@@ -1,4 +1,4 @@
-商品カテゴリー:<%= @product.category.name %>
+商品カテゴリー:<%= link_to @product.category.name, members_category_path(@product.category) %>
 <br>
 商品名:<%= @product.name %>
 <br>
