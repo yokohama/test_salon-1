@@ -22,6 +22,7 @@ Rails.application.routes.draw do
     resource :dashboards, only: [:show]
     resource :profiles, only: [:show, :edit, :update]
     resources :products, only: [:index, :show]
+    resources :categories, only: [:index, :show]
   end
 
 end
