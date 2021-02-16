@@ -14,7 +14,7 @@ module Staffs
     def create
       @product = Product.new(product_params)
       if @product.save
-        redirect_to staffs_products_path
+        redirect_to staffs_products_path, notice: '商品を登録しました'
       else
         render :new
       end
@@ -26,7 +26,7 @@ module Staffs
 
     def update
       if @product.update(product_params)
-        redirect_to staffs_product_path
+        redirect_to staffs_product_path, notice: '商品を編集しました'
       else
         render :edit
       end
@@ -37,7 +37,7 @@ module Staffs
 
     def destroy
       @product.destroy
-      redirect_to staffs_products_path
+      redirect_to staffs_products_path, alert: '商品を削除しました'
     end
 
     private
