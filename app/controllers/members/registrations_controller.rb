@@ -66,6 +66,13 @@ class Members::RegistrationsController < Devise::RegistrationsController
   #   super(resource)
   # end
 
+
+  protected
+  #アカウント編集後のリダイレクト先
+  def after_update_path_for(resource)
+    members_products_path
+  end
+
   private
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up, keys: [:nickname])
