@@ -1,0 +1,9 @@
+ja:
+  staffs:
+    products:
+      destroy:
+        success: 商品を削除しました
+      create:
+        success: 商品を登録しました
+      update:
+        success: 商品を編集しました
