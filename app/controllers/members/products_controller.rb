@@ -3,7 +3,6 @@ module Members
 
     def index
       @products = Product.includes(:category)
-      @categorys = Category.includes(:products)
     end
 
     def show
