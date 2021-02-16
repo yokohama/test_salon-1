@@ -37,7 +37,7 @@ module Staffs
 
     def destroy
       @category.destroy
-      redirect_to staffs_categories_path, alert: 'カテゴリを削除しました。'
+      redirect_to staffs_categories_path, alert: I18n.t(:success)
     end
 
     private
