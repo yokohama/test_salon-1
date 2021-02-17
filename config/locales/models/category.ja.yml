@@ -3,5 +3,5 @@ ja:
     models:
       category: カテゴリー
     attributes:
-      product:
+      category:
         name: カテゴリー
