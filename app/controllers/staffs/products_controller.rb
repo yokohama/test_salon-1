@@ -4,7 +4,7 @@ module Staffs
     before_action :products_all, only: [:new, :create, :edit, :update]
     
     def index
-      @products = Product.includes(:category)
+      @products = Product.includes(:category).page(params[:page])
     end
 
     def new
