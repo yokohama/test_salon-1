@@ -1,0 +1,11 @@
+商品カテゴリー:<%= link_to @product.category.name, members_category_path(@product.category) %>
+<br>
+商品名:<%= @product.name %>
+<br>
+金額:<%= @product.price %>
+<br>
+説明文:<%= @product.description %>
+<br>
+<br>
+
+<%= link_to "商品一覧に戻る", members_products_path %>
