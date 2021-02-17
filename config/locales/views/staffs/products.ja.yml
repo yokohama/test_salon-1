@@ -7,3 +7,5 @@ ja:
         success: 商品を登録しました
       update:
         success: 商品を編集しました
+      show:
+        confirm: 本当に削除してもいいですか？

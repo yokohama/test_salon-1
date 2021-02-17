@@ -2,6 +2,6 @@
 <br>
 <br>
 <% @categories.each do |category| %>
-  <%= link_to "#{category.name}", staffs_category_path(category.id)%>/<%= link_to "削除", staffs_category_path(category.id), method: :delete %>
+  <%= link_to "#{category.name}", staffs_category_path(category.id)%>/<%= link_to "削除", staffs_category_path(category.id), method: :delete, data: { confirm: t('.confirm') } %>
 <br>
 <% end %>
