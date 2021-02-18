@@ -1,0 +1,11 @@
+ja:
+  activerecord:
+    models:
+      product: 商品
+    attributes:
+      product:
+        name: 商品名
+        price: 値段
+        description: 説明
+        category: カテゴリー
+        category_id: カテゴリー選択
