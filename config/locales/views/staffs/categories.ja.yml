@@ -9,3 +9,4 @@ ja:
         success: カテゴリを編集しました
       destroy:
         success: カテゴリを削除しました
+        
