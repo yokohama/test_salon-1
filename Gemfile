@@ -63,3 +63,5 @@ gem 'devise'
 gem 'paranoia'
 
 gem "rails-i18n"
+
+gem 'kaminari'
