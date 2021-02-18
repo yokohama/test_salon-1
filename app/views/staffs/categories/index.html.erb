@@ -5,3 +5,5 @@
   <%= link_to "#{category.name}", staffs_category_path(category.id)%>/<%= link_to "削除", staffs_category_path(category.id), method: :delete, data: { confirm: t('.confirm') } %>
 <br>
 <% end %>
+<br>
+<%= paginate @categories %>
