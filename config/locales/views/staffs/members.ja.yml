@@ -3,4 +3,4 @@ ja:
     members:
       search:
         blank: 検索キーワードがありません
-      
+        no_result: ヒットするmemberがいませんでした
