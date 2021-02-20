@@ -5,9 +5,9 @@
 <%= paginate @results %>
 <table border="1">
     <tr>
-      <th>id</th>
-      <th>nickname</th>
-      <th>email</th>
+      <th><%= sort_link(@q, :id, "id", hide_indicator: true) %></th>
+      <th><%= sort_link(@q, :nickname, "nickname", hide_indicator: true) %></th>
+      <th><%= sort_link(@q, :email, "email", hide_indicator: true) %></th>
     </tr>
 
     <% @results.each do |result| %>

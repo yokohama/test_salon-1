@@ -3,7 +3,7 @@ module Staffs
     before_action :set_q, only: [:index, :search]
 
     def index
-      @members = Member.all.page(params[:page]).per(5)
+      @members = @q.result.page(params[:page]).per(5)
     end
 
     def search
