@@ -1,4 +1,36 @@
-<% @members.each do |member| %>
-<%= member.email %>
-<br>
+<p>ユーザー検索</p>
+<%= search_form_for @q, url: search_staffs_members_path do |f| %>
+  <div>
+    <%= f.label :id_eq, 'ユーザーID' %>
+    <%= f.search_field :id_eq %>
+  </div>
+  <div>
+    <%= f.label :nickname_cont, 'ユーザー名' %>
+    <%= f.search_field :nickname_cont %>
+  </div>
+  <div>
+    <%= f.label :email_cont, 'email' %>
+    <%= f.search_field :email_cont %>
+  </div>
+  <br>
+  <%= f.submit '検索' %>
 <% end %>
+<br>
+
+<%= paginate @members %>
+<table border="1">
+    <tr>
+      <th>id</th>
+      <th>nickname</th>
+      <th>email</th>
+    </tr>
+
+    <% @members.each do |member| %>
+      <tr>
+        <td><%= member.id %></td>
+        <td><%= member.nickname %></td>
+        <td><%= member.email %></td>
+      </tr>
+    <% end %>
+</table>
+<%= paginate @members %>
