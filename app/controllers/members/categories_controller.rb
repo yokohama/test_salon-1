@@ -3,6 +3,7 @@ module Members
 
     def index
       @categories = Category.all
+      @categories = Category.page(params[:page]).per(10)
     end
 
     def show
