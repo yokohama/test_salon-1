@@ -1,5 +1,9 @@
 <div class="alert alert-success" role="alert">
-  <p class="notice"> <%= "「#{params[:q][:id_eq]} #{ params[:q][:nickname_cont]} #{params[:q][:email_cont]} 」の検索結果: #{@results.count}個" %></p>
+  <p class="notice">
+    <% str = "" %>
+    <% params[:q].each {|key, val| str += "#{key}=#{val}, " } %>
+    <%= "#{str}の検索結果： #{@results.count}" %>
+  </p>
 </div>
 
 <%= paginate @results %>
