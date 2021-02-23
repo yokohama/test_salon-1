@@ -4,8 +4,9 @@ ja:
       index:
         confirm: 本当に削除してもいいですか？
       create: 
-        success: カテゴリを登録しました
+        success: "%{model_name}を登録しました"
       update: 
-        success: カテゴリを編集しました
+        success: "%{model_name}を編集しました"
       destroy:
-        success: カテゴリを削除しました
+        success: "%{model_name}を削除しました"
+        
