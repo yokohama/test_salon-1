@@ -1,5 +1,7 @@
+<%= render partial: "result", locals: {members: @members, results: @results} %>
+
 <p>ユーザー検索</p>
-<%= search_form_for @q, url: search_staffs_members_path do |f| %>
+<%= search_form_for @q, url: staffs_members_path do |f| %>
   <div>
     <%= f.label :id_eq, 'ユーザーID' %>
     <%= f.search_field :id_eq %>
@@ -33,4 +35,7 @@
       </tr>
     <% end %>
 </table>
+<br>
 <%= paginate @members %>
+
+<%= link_to 'member一覧', staffs_members_path %>
