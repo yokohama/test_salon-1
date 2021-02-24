@@ -3,3 +3,10 @@ ja:
     categories:
       index:
         confirm: 本当に削除してもいいですか？
+      create: 
+        success: "%{model_name}を登録しました"
+      update: 
+        success: "%{model_name}を編集しました"
+      destroy:
+        success: "%{model_name}を削除しました"
+        

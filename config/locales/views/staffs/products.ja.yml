@@ -2,10 +2,12 @@ ja:
   staffs:
     products:
       destroy:
-        success: 商品を削除しました
+        success: "%{model_name}を削除しました"
       create:
-        success: 商品を登録しました
+        success: "%{model_name}を登録しました"
       update:
-        success: 商品を編集しました
+        success: "%{model_name}を編集しました"
       show:
+        confirm: 本当に削除してもいいですか？
+      index:
         confirm: 本当に削除してもいいですか？

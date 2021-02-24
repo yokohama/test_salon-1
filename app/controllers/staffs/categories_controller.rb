@@ -17,7 +17,7 @@ module Staffs
     def create
       @category = Category.new(category_params)
       if @category.save
-        redirect_to staffs_categories_path
+        redirect_to staffs_categories_path, notice: t('.success', model_name: Category.model_name.human)
       else
         render :new
       end
@@ -28,7 +28,7 @@ module Staffs
 
     def update
       if @category.update(category_params)
-        redirect_to staffs_category_path
+        redirect_to staffs_category_path, notice: t('.success', model_name: Category.model_name.human)
       else
         render :edit
       end
@@ -36,7 +36,7 @@ module Staffs
 
     def destroy
       @category.destroy
-      redirect_to staffs_categories_path
+      redirect_to staffs_categories_path, alert: t('.success', model_name: Category.model_name.human)
     end
 
     private
@@ -48,6 +48,7 @@ module Staffs
     def category_find
       @category = Category.find(params[:id])
     end
+
   end
 end
 
