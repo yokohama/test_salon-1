@@ -23,6 +23,7 @@ Rails.application.routes.draw do
     resource :profiles, only: [:show, :edit, :update]
     resources :products, only: [:index, :show]
     resources :categories, only: [:index, :show]
+    resources :favorites, only: [:index, :create, :destroy]
   end
 
 end
