@@ -1,4 +1,4 @@
-<%= render partial: "result", locals: {members: @members, results: @results} %>
+<%= render partial: "result", locals: {members: @members, results: @results, query: @query} %>
 
 <p>ユーザー検索</p>
 <%= search_form_for @q, url: staffs_members_path do |f| %>

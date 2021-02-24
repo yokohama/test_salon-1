@@ -1,15 +1,13 @@
-<% if params[:q]['id_eq'] == "" && params[:q]['nickname_cont'] == "" && params[:q]['email_cont'] == "" %>
-
-<% elsif @results.count == 0 %>
+<% if results.count == 0 %>
   <div class="alert alert-danger" role="alert">
     <p class="alert"><%= t('.no_result') %></p>
   </div>
 <% else %>
-<div class="alert alert-success" role="alert">
-  <p class="notice">
-    <% str = "" %>
-    <% params[:q].each {|key, val| str += "#{key}=#{val}, " } %>
-    <%= "#{str}の検索結果："%><%= @results.count %>
-  </p>
-</div>
+  <% if query.present? %>
+    <div class="alert alert-success" role="alert">
+      <p class="notice">
+        検索結果：<%= results.count %>
+      </p>
+    </div>
+  <% end %>
 <% end %>
