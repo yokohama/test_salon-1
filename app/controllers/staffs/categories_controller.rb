@@ -3,7 +3,6 @@ module Staffs
     before_action :category_find, only: [:show, :edit, :update, :destroy]
 
     def index
-      @categories = Category.all
       @categories = Category.page(params[:page]).per(10)
     end
 
