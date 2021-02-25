@@ -1,17 +1,17 @@
 <%= render partial: "result", locals: {members: @members, results: @results, query: @query} %>
 
 <h5>ユーザー検索</h5>
-<%= search_form_for @q, url: staffs_members_path do |f| %>
+<%= search_form_for @q, url: staffs_members_path, class: 'form-horizontal' do |f| %>
   <div class="form-group">
-    <%= f.label :id_eq, 'ユーザーID' %>
+    <%= f.label 'ユーザーID' %>
     <%= f.search_field :id_eq, class: 'form-control' %>
   </div>
   <div class="form-group">
-    <%= f.label :nickname_cont, 'ユーザー名' %>
+    <%= f.label 'ユーザー名' %>
     <%= f.search_field :nickname_cont, class: 'form-control' %>
   </div>
   <div class="form-group">
-    <%= f.label :email_cont, 'email' %>
+    <%= f.label 'email' %>
     <%= f.search_field :email_cont, class: 'form-control' %>
   </div>
   <div class="actions">
@@ -21,7 +21,7 @@
 <br>
 
 <%= paginate @members %>
-<table border="1">
+<table class="table table-striped">
     <tr>
       <th><%= sort_link(@q, :id, "id", hide_indicator: true) %></th>
       <th><%= sort_link(@q, :nickname, "nickname", hide_indicator: true) %></th>
