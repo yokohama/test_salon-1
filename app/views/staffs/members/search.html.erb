@@ -1,0 +1,28 @@
+<div class="alert alert-success" role="alert">
+  <p class="notice">
+    <% str = "" %>
+    <% params[:q].each {|key, val| str += "#{key}=#{val}, " } %>
+    <%= "#{str}の検索結果： #{@results.count}" %>
+  </p>
+</div>
+
+<%= paginate @results %>
+<table border="1">
+    <tr>
+      <th><%= sort_link(@q, :id, "id", hide_indicator: true) %></th>
+      <th><%= sort_link(@q, :nickname, "nickname", hide_indicator: true) %></th>
+      <th><%= sort_link(@q, :email, "email", hide_indicator: true) %></th>
+    </tr>
+
+    <% @results.each do |result| %>
+      <tr>
+        <td><%= result.id %></td>
+        <td><%= result.nickname %></td>
+        <td><%= result.email %></td>
+      </tr>
+    <% end %>
+</table>
+<br>
+<%= paginate @results %>
+
+<%= link_to 'member一覧', staffs_members_path %>

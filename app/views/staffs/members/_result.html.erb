@@ -1,0 +1,13 @@
+<% if results.count == 0 %>
+  <div class="alert alert-danger" role="alert">
+    <p class="alert"><%= t('.no_result') %></p>
+  </div>
+<% else %>
+  <% if query.present? %>
+    <div class="alert alert-success" role="alert">
+      <p class="notice">
+        検索結果：<%= results.count %>
+      </p>
+    </div>
+  <% end %>
+<% end %>
