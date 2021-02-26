@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   
   namespace :staffs do
     resource :dashboards, only: [:show]
+    get 'dashboards/bootstrap', to: 'dashboards#bootstrap'
     resources :members, only: [:index]
     resources :categories
     resources :products
