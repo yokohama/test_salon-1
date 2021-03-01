@@ -14,10 +14,42 @@
       <br />
 
       <%= render partial: "/shared/notice" %>
-      <% if current_staff %>
-        <%= link_to 'ログアウト', destroy_staff_session_path, method: :delete %>
-      <% end %>
-      <p>スタッフ</p>
+      <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark ">
+        <%= link_to 'Test_Salon-1 admin', root_path, class: 'navbar-brand mr-auto mr-lg-0' %>
+        <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <%= link_to 'Dashboard', staffs_dashboards_path, class: 'nav-link' %>
+            </li>
+            <li class="nav-item">
+              <%= link_to 'Members', staffs_members_path, class: 'nav-link' %>
+            </li>
+            <li class="nav-item dropdown">
+              <%= link_to 'Categorys', staffs_categories_path, class: 'nav-link dropdown-toggle', 'id': :'dropdown01', 'data-toggle': :dropdown, 'aria-haspopup': :'true', 'aria-expanded': :'false' %>
+              <div class="dropdown-menu" aria-labelledby="dropdown01">
+                <%= link_to 'index', staffs_categories_path, class: 'dropdown-item' %>
+                <%= link_to 'new', new_staffs_category_path, class: 'dropdown-item' %>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <%= link_to 'Products', staffs_products_path, class: 'nav-link dropdown-toggle', 'id': :'dropdown01', 'data-toggle': :dropdown, 'aria-haspopup': :'true', 'aria-expanded': :'false' %>
+              <div class="dropdown-menu" aria-labelledby="dropdown01">
+                <%= link_to 'index', staffs_products_path, class: 'dropdown-item' %>
+                <%= link_to 'new', new_staffs_product_path, class: 'dropdown-item' %>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+          <% if current_staff %>
+          <nav class="my-2 my-md-0 mr-md-3">
+            <%= link_to current_staff.email, destroy_staff_session_path, class: 'nav-link' %>
+          </nav>
+        <% end %>
+      </nav>
       <%= yield %>
     </div>
 

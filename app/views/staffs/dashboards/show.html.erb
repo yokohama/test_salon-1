@@ -1,1 +1,56 @@
-staffs/dashboards/show
+<body  class="bg-light" >
+  <main role="main" class="container">
+    <div class="container my-3">
+      <div class="card-deck mb-3 text-center">
+        <div class="card mb-4 shadow-sm">
+          <%= link_to(staffs_members_path, class: 'card-header') do %>
+            <h4 class="my-0 font-weight-normal">Members</h4>
+          <% end %>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title"><small class="text-muted">ユーザー管理</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>利用者の管理を行います</li>
+              <li>現在の利用者数：<%= Member.count %></li>
+            </ul>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><%= link_to 'index', staffs_members_path %></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="card mb-4 shadow-sm">
+          <%= link_to(staffs_categories_path, class: 'card-header') do %>
+            <h4 class="my-0 font-weight-normal">Categorys</h4>
+          <% end %>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title"><small class="text-muted">カテゴリー管理</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>カテゴリー管理を行います</li>
+              <li>現在のカテゴリー数：<%= Category.count %></li>
+            </ul>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><%= link_to 'index', staffs_categories_path %></a></li>
+              <li class="list-group-item"><%= link_to 'new', new_staffs_category_path %></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="card mb-4 shadow-sm">
+          <%= link_to(staffs_products_path, class: 'card-header') do %>
+            <h4 class="my-0 font-weight-normal">Products</h4>
+          <% end %>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title"><small class="text-muted">商品管理</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>商品管理を行います</li>
+              <li>現在の商品数：<%= Product.count %></li>
+            </ul>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><%= link_to 'index', staffs_products_path %></a></li>
+              <li class="list-group-item"><%= link_to 'new', new_staffs_product_path %></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+
