@@ -3,8 +3,6 @@ module Staffs
     def show
     end
 
-    def bootstrap
-    end
   end
 end
 
